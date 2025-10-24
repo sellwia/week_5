@@ -4,6 +4,7 @@ void main(){
 runApp (MyApp());
 }
 
+// Methode MyApp
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -12,6 +13,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Title Aplikasi',
+      home: MyHome(),
     );
+  }
+}
+
+// methode MyHome
+class MyHome extends StatelessWidget {
+  const MyHome({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
