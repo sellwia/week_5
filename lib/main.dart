@@ -38,17 +38,17 @@ class MyHome extends StatelessWidget {
         ],
       ),
       body : Center(
-        Child : Column (
-          mainAxisAligment : MainAxisAligment.center,
-          Children : [
+        child : Column (
+          mainAxisAlignment : MainAxisAlignment.center,
+          children : [
             // kolom Pertama polosan
             Container (
-              Widht : 200,
+              width : 200,
               height : 100,
-              aligment : Aligment.center,
+              alignment : Alignment.center,
               decoration: BoxDecoration(
                 gradient : const LinearGradient(
-                  begin : Aligment.topRight,
+                  begin : Alignment.topRight,
                   end: Alignment.bottomLeft,
                   colors: [Colors.blue, Colors.amberAccent],
                 ),
@@ -64,16 +64,16 @@ class MyHome extends StatelessWidget {
 
             // kolom kedua (border)
             Container (
-              Widht : 200,
+              width : 200,
               height : 100,
-              aligment : Aligment.center,
+              alignment : Alignment.center,
               decoration: BoxDecoration(
                 border: Border.all(
                   width: 3.0,
                   color: Colors.black,
                 ),
                 gradient : const LinearGradient(
-                  begin : Aligment.topRight,
+                  begin : Alignment.topRight,
                   end: Alignment.bottomLeft,
                   colors: [Colors.blue, Colors.amberAccent],
                 ),
@@ -84,13 +84,34 @@ class MyHome extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
-            
-                )
-              )
-            )
-          ]
-        )
-      )
+
+            const SizedBox(height: 20), //jarak antar kolom
+
+            // kolom ketiga (buat miring)
+            Transform.rotate(
+              angle : 0.15,
+              child: Container(
+              width : 200,
+              height : 100,
+              alignment : Alignment.center,
+              decoration: BoxDecoration(
+              gradient : const LinearGradient(
+                colors: [Colors.purpleAccent, Colors.blue],
+              ),
+              borderRadius: BorderRadius.circular(15),
+              ),
+              child: const Text(
+                "tambah kolom miring",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold
+                ),
+              ),
+            ),
+         ),
+        ]
+      ),
+      ),
     );
   }
 }
