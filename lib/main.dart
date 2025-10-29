@@ -37,7 +37,37 @@ class MyHome extends StatelessWidget {
           SizedBox(width: 20,)
         ],
       ),
-      
+      body : Center(
+        Child : Column (
+          mainAxisAligment : MainAxisAligment.center,
+          Children : [
+            // kolom Pertama polosan
+            Container (
+              Widht : 200,
+              height : 100,
+              aligment : Aligment.center,
+              decoration: BoxDecoration(
+                gradient : const LinearGradient(
+                  begin : Aligment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [Colors.blue, Colors.amberAccent],
+                ),
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: const Text(
+                "Ini Kolom 1",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+
+            const SizedBox(height: 20), //jarak antar kolom
+            
+                )
+              )
+            )
+          ]
+        )
+      )
     );
   }
 }
