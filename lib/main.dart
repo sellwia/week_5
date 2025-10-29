@@ -24,9 +24,9 @@ class MyHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return return Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        title: Text("Latihan Container", style: TextStyle(color: Colors.white)),
+        title: Text("Latihan Container"),
         backgroundColor: Colors.blueGrey,
         actions: [
           Icon(Icons.person, color: Colors.white),
@@ -37,6 +37,7 @@ class MyHome extends StatelessWidget {
           SizedBox(width: 20,)
         ],
       ),
+      
     );
   }
 }
