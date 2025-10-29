@@ -61,6 +61,29 @@ class MyHome extends StatelessWidget {
             ),
 
             const SizedBox(height: 20), //jarak antar kolom
+
+            // kolom kedua (border)
+            Container (
+              Widht : 200,
+              height : 100,
+              aligment : Aligment.center,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  width: 3.0,
+                  color: Colors.black,
+                ),
+                gradient : const LinearGradient(
+                  begin : Aligment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [Colors.blue, Colors.amberAccent],
+                ),
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: const Text(
+                "tambah kolom 2",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
             
                 )
               )
